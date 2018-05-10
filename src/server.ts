@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//****** Definición de todas las rutas de la aplicación
+// ****** Definición de todas las rutas de la aplicación
 const router = express.Router();
 
 router.use((req, res, next) => {
@@ -47,7 +47,7 @@ router.route('/movies/:movie_uuid')
   }));
 
 app.use('/api', router);
-//******
+// ******
 
 app.listen(port);
 console.log(`Magic happens on port ${port}...`);
