@@ -24,7 +24,11 @@ router.route('/movies')
   .post((req, res) => {
     console.log('Creación de una nueva película', req.body.name);
     res.json({ message: '¡Película creada!' });
-  });
+  })
+  .get(((req, res) => {
+    console.log('Buscando por todas las películas');
+    res.json({ message: 'Aquí las tienes []' });
+  }));
 
 app.use('/api', router);
 //******
