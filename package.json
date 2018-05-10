@@ -1,0 +1,27 @@
+{
+  "name": "swagger-node-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "lint": "tslint -p ./tsconfig.json",
+    "test": "jest"
+  },
+  "author": {
+    "name": "raulanatol"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.11.1",
+    "@types/method-override": "0.0.31",
+    "@types/node": "^10.0.6",
+    "ts-node": "^6.0.3",
+    "tslint-config-prettier": "^1.12.0",
+    "typescript": "^2.8.3"
+  }
+}
