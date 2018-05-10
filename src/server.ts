@@ -30,6 +30,12 @@ router.route('/movies')
     res.json({ message: 'Aquí las tienes []' });
   }));
 
+router.route('/movies/:movie_uuid')
+  .get(((req, res) => {
+    console.log('Buscando por la película con id', req.params.movie_uuid);
+    res.json({ message: 'Aquí tienes tu película' });
+  }));
+
 app.use('/api', router);
 //******
 
