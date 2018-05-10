@@ -11,6 +11,11 @@ app.use(bodyParser.json());
 //****** Definición de todas las rutas de la aplicación
 const router = express.Router();
 
+router.use((req, res, next) => {
+  console.log('¡Algo está pasando por aquí!');
+  next();
+});
+
 router.get('/', (req, res) => {
   res.json({ message: 'Hello world' });
 });
