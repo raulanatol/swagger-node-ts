@@ -40,6 +40,10 @@ router.route('/movies/:movie_uuid')
     console.log('Buscando la película', movieUUID);
     console.log('Cambiamos el nombre por', req.body.name);
     res.json({ message: 'Película actualizada correctamente!' });
+  }))
+  .delete(((req, res) => {
+    console.log('Elimnamos la película', req.params.movie_uuid);
+    res.json({ message: 'Película eliminada correctamente!' });
   }));
 
 app.use('/api', router);
