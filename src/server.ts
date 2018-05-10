@@ -20,8 +20,13 @@ router.get('/', (req, res) => {
   res.json({ message: 'Hello world' });
 });
 
-app.use('/api', router);
+router.route('/movies')
+  .post((req, res) => {
+    console.log('Creación de una nueva película', req.body.name);
+    res.json({ message: '¡Película creada!' });
+  });
 
+app.use('/api', router);
 //******
 
 app.listen(port);
