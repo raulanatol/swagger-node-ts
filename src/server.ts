@@ -34,6 +34,12 @@ router.route('/movies/:movie_uuid')
   .get(((req, res) => {
     console.log('Buscando por la película con id', req.params.movie_uuid);
     res.json({ message: 'Aquí tienes tu película' });
+  }))
+  .put(((req, res) => {
+    const movieUUID = req.params.movie_uuid;
+    console.log('Buscando la película', movieUUID);
+    console.log('Cambiamos el nombre por', req.body.name);
+    res.json({ message: 'Película actualizada correctamente!' });
   }));
 
 app.use('/api', router);
